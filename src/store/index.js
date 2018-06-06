@@ -20,6 +20,13 @@ const store = new Vuex.Store({
     list: {
       namespaced: true,
       ...list
+      ////Note by rain "..."符号直接把数组变成分开的元素
+      // 原型:
+      // state,
+      // mutations,
+      // actions,
+      //
+
     }
   }
 })
