@@ -31,6 +31,8 @@ import request from './request'
  * 口碑榜 -> weekly （movie_advance_r）
  * 新片榜 -> new_movies（movie_advance_r）
  */
+
+////Note by rain: api接口, 在这里处理各个接口的参数
 export function getBoardData ({ board = 'top250', page = 1, count = 20, city = '北京', search = '' } = {}) {
   let params = {}
   if (board !== 'us_box') {

@@ -22,12 +22,13 @@ export default {
   },
 
   computed: {
+    ////Note by rain: list 是模块名,  后面的数组是绑定的state
     ...mapState('list', ['movies', 'hasMore', 'type'])
   },
-
+  //// LIST_CLEAR_STATE为命名空间的方法, 直接调用? maybe
   methods: {
     ...mapMutations('list', {
-      clearState: LIST_CLEAR_STATE
+      clearState: LIST_CLEAR_STATE 
     }),
     ...mapActions('list', [
       'getMovies'
