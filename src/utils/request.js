@@ -1,6 +1,7 @@
 import wx from 'wx'
 import Fly from 'flyio'
 
+////Note by rain: 网络请求封装, 使用flyio网络请求库
 const request = new Fly()
 
 request.config.timeout = 10 * 1000
@@ -13,6 +14,7 @@ if (process.env.METHOD === 'proxy1') {
 }
 
 request.interceptors.request.use((request) => {
+  ////Note by rain: Setting header here
   wx.showLoading({ title: '拼命加载中...' })
   return request
 })
